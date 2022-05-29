@@ -1,0 +1,45 @@
+{
+  "name": "react-native-searchable-dropdown-kj",
+  "title": "React Native Searchable Dropdown KJ",
+  "version": "1.8.11",
+  "description": "A react-native dropdown component easy to customize for both iOS and Android.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kajanan02/react-native-searchable-dropdown-kj.git",
+    "baseUrl": "https://github.com/Kajanan02/react-native-searchable-dropdown-kj"
+  },
+  "keywords": [
+    "react-native",
+    "elements",
+    "components",
+    "material",
+    "dropdown",
+    "menu",
+    "multiselect",
+    "picker",
+    "select",
+    "searchable-dropdown",
+    "select country"
+  ],
+  "author": {
+    "name": "Hoa Phan",
+    "email": "hoaphantn7604@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "@types/lodash": "*"
+  }
+}
