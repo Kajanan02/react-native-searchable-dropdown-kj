@@ -1,7 +1,7 @@
 {
   "name": "react-native-searchable-dropdown-kj",
   "title": "React Native Searchable Dropdown KJ",
-  "version": "1.8.11",
+  "version": "1.8.12",
   "description": "A react-native dropdown component easy to customize for both iOS and Android.",
   "main": "index.ts",
   "scripts": {
