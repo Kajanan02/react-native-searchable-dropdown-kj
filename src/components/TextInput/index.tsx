@@ -22,6 +22,7 @@ const TextInputComponent: CTextInput = (props) => {
     fontFamily,
     style,
     value,
+    autoSearchFoundOnly,
     placeholderTextColor = '#000',
     placeholder = '',
     showIcon,
@@ -33,6 +34,7 @@ const TextInputComponent: CTextInput = (props) => {
   } = props;
 
   const [text, setText] = useState<string>('');
+  const searchInputRef = React.useRef<TextInput>(null);
 
   useEffect(() => {
     if (value) {
@@ -73,6 +75,14 @@ const TextInputComponent: CTextInput = (props) => {
     }
   }
 
+
+  useEffect(() => {
+    if(!autoSearchFoundOnly) return;
+    if(searchInputRef.current){
+      searchInputRef.current.focus();
+    }
+  },[autoSearchFoundOnly])
+
   return (
     <TouchableWithoutFeedback>
       <View style={[style]}>
@@ -80,6 +90,7 @@ const TextInputComponent: CTextInput = (props) => {
           {renderLeftIcon?.()}
           <TextInput
             {...props}
+            ref={searchInputRef}
             style={[styles.input, inputStyle, font()]}
             value={text}
             placeholder={placeholder}

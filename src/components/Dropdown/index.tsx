@@ -46,6 +46,7 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>((props, currentRe
     fontFamily,
     iconColor = "gray",
     searchPlaceholder,
+    autoSearchFoundOnly,
     placeholder,
     search = false,
     maxHeight = 340,
@@ -255,6 +256,7 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>((props, currentRe
           keyboardType={isIOS ? 'default' : 'visible-password'}
           placeholder={searchPlaceholder}
           onChangeText={onSearch}
+          autoSearchFoundOnly={autoSearchFoundOnly}
           placeholderTextColor="gray"
           iconStyle={[{ tintColor: iconColor }, iconStyle]}
           onFocus={() => setFocus(true)}

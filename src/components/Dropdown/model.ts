@@ -24,6 +24,7 @@ export interface IProps {
   labelField: string;
   valueField: string;
   search?: boolean;
+  autoSearchFoundOnly?: boolean;
   searchPlaceholder?: string;
   disable?: boolean;
   autoScroll?: boolean;

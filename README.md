@@ -14,6 +14,8 @@ Fork of `react-native-element-dropdown` and add implement for A React Native dro
 
 :boom: => Implemented with typescript
 
+:boom: => new feature added
+
 
 ## Getting started
 ```js
@@ -32,40 +34,41 @@ or
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/dropdown/demo2.gif)
 
 #### Dropdown Props
-| Props              | Params                                          | isRequire | Description                                                         |
-| ------------------ | ----------------------------------------------- | --------- | ------------------------------------------------------------------- |
-| data               | Array                                           | Yes       | Data is a plain array                                               |
-| labelField         | String                                          | Yes       | Extract the label from the data item                                |
-| valueField         | String                                          | Yes       | Extract the primary key from the data item                          |
-| onChange           | (item: object) => void                          | Yes       | Selection callback                                                  |
-| value              | Item                                            | No        | Selected value                                                      |
-| placeholder        | String                                          | No        | The string that will be rendered before dropdown has been selected  |
-| placeholderStyle   | TextStyle                                       | No        | Styling for text placeholder                                        |
-| selectedTextStyle  | TextStyle                                       | No        | Styling for selected text                                           |
-| selectedTextProps  | TextProps                                       | No        | Text Props for selected text. Ex: numberOfLines={1}                 |
-| style              | ViewStyle                                       | No        | Styling for container view                                          |
-| containerStyle     | ViewStyle                                       | No        | Styling for container list                                          |
-| maxHeight          | Number                                          | No        | Customize height for container list                                 |
-| fontFamily         | String                                          | No        | Customize font style                                                |
-| iconStyle          | ImageStyle                                      | No        | Styling for icon                                                    |
-| iconColor          | String                                          | No        | Color of icons                                                      |
-| activeColor        | String                                          | No        | Background color for item selected in container list                |
-| search             | Boolean                                         | No        | Show or hide input search                                           |
-| searchQuery        | (keyword: string, labelValue: string) => Boolean| No        | Callback used to filter the list of items                           |
-| inputSearchStyle   | ViewStyle                                       | No        | Styling for input search                                            |
-| searchPlaceholder  | String                                          | No        | The string that will be rendered before text input has been entered |
-| renderInputSearch  | (onSearch: (text:string) => void) => JSX.Element| No        | Customize TextInput search                                          |
-| disable            | Boolean                                         | No        | Specifies the disabled state of the Dropdown                        |
-| dropdownPosition   | 'auto' or 'top' or 'bottom'                     | No        | Dropdown list position. Default is 'auto'                           |
-| autoScroll         | Boolean                                         | No        | Auto scroll to index item selected, default is true                 |
-| showsVerticalScrollIndicator | Boolean                               | No        | When true, shows a vertical scroll indicator, default is true       |
-| renderLeftIcon     | () => JSX.Element                               | No        | Customize left icon for dropdown                                    |
-| renderRightIcon    | () => JSX.Element                               | No        | Customize right icon for dropdown                                   |
-| renderItem         | (item: object) => JSX.Element                   | No        | Takes an item from data and renders it into the list                |
-| flatListProps      | FlatListProps                                   | No        | Customize FlastList element                                         |
-| onFocus            | () => void                                      | No        | Callback that is called when the dropdown is focused                |
-| onBlur             | () => void                                      | No        | Callback that is called when the dropdown is blurred                |
-| keyboardAvoiding   | Boolean                                         | No        | keyboardAvoiding default is true                                    |  
+| Props              | Params                                          | isRequire | Description                                                                                          |
+| ------------------ | ----------------------------------------------- | --------- |------------------------------------------------------------------------------------------------------|
+| data               | Array                                           | Yes       | Data is a plain array                                                                                |
+| labelField         | String                                          | Yes       | Extract the label from the data item                                                                 |
+| valueField         | String                                          | Yes       | Extract the primary key from the data item                                                           |
+| onChange           | (item: object) => void                          | Yes       | Selection callback                                                                                   |
+| value              | Item                                            | No        | Selected value                                                                                       |
+| placeholder        | String                                          | No        | The string that will be rendered before dropdown has been selected                                   |
+| placeholderStyle   | TextStyle                                       | No        | Styling for text placeholder                                                                         |
+| selectedTextStyle  | TextStyle                                       | No        | Styling for selected text                                                                            |
+| selectedTextProps  | TextProps                                       | No        | Text Props for selected text. Ex: numberOfLines={1}                                                  |
+| style              | ViewStyle                                       | No        | Styling for container view                                                                           |
+| containerStyle     | ViewStyle                                       | No        | Styling for container list                                                                           |
+| maxHeight          | Number                                          | No        | Customize height for container list                                                                  |
+| fontFamily         | String                                          | No        | Customize font style                                                                                 |
+| iconStyle          | ImageStyle                                      | No        | Styling for icon                                                                                     |
+| iconColor          | String                                          | No        | Color of icons                                                                                       |
+| activeColor        | String                                          | No        | Background color for item selected in container list                                                 |
+| search             | Boolean                                         | No        | Show or hide input search                                                                            |
+| searchQuery        | (keyword: string, labelValue: string) => Boolean| No        | Callback used to filter the list of items                                                            |
+| inputSearchStyle   | ViewStyle                                       | No        | Styling for input search                                                                             |
+| searchPlaceholder  | String                                          | No        | The string that will be rendered before text input has been entered                                  |
+| renderInputSearch  | (onSearch: (text:string) => void) => JSX.Element| No        | Customize TextInput search                                                                           |
+| disable            | Boolean                                         | No        | Specifies the disabled state of the Dropdown                                                         |
+| dropdownPosition   | 'auto' or 'top' or 'bottom'                     | No        | Dropdown list position. Default is 'auto'                                                            |
+| autoScroll         | Boolean                                         | No        | Auto scroll to index item selected, default is true                                                  |
+| showsVerticalScrollIndicator | Boolean                               | No        | When true, shows a vertical scroll indicator, default is true                                        |
+| renderLeftIcon     | () => JSX.Element                               | No        | Customize left icon for dropdown                                                                     |
+| renderRightIcon    | () => JSX.Element                               | No        | Customize right icon for dropdown                                                                    |
+| renderItem         | (item: object) => JSX.Element                   | No        | Takes an item from data and renders it into the list                                                 |
+| flatListProps      | FlatListProps                                   | No        | Customize FlastList element                                                                          |
+| onFocus            | () => void                                      | No        | Callback that is called when the dropdown is focused                                                 |
+| onBlur             | () => void                                      | No        | Callback that is called when the dropdown is blurred                                                 |
+| keyboardAvoiding   | Boolean                                         | No        | keyboardAvoiding default is true                                                                     |  
+| autoSearchFoundOnly   | Boolean                                         | No        | autoSearchFoundOnly default is false; when expand the dropdoen search will be automatically foucused |  
 
 
 #### MultiSelect Props
