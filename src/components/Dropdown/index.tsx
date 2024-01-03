@@ -181,8 +181,9 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>((props, currentRe
       const defaultFilterFunction = (e: any) => {
         const item = _.get(e, labelField)?.toLowerCase().replace(' ', '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         const key = text.toLowerCase().replace(' ', '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-        return item.indexOf(key) >= 0
+        if (item != null) {
+          return item.indexOf(key) >= 0
+        }
       }
 
       const propSearchFunction = (e: any) => {
