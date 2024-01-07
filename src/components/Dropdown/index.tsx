@@ -182,7 +182,11 @@ const DropdownComponent = React.forwardRef<any, DropdownProps>((props, currentRe
         const item = _.get(e, labelField)?.toLowerCase().replace(' ', '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         const key = text.toLowerCase().replace(' ', '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-        return item.indexOf(key) >= 0
+        if (item) {
+          return item.indexOf(key) >= 0
+        }else{
+          return false;
+        }
       }
 
       const propSearchFunction = (e: any) => {
