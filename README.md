@@ -1,5 +1,5 @@
 ## react-native-searchable-dropdown-kj
-Fork of `react-native-element-dropdown` and add implement for A React Native dropdown component easy to customize for both iOS and Android.
+ A React Native dropdown component easy to customize for both iOS and Android.
 
 ## Features
 :boom: => Bugs Fix
