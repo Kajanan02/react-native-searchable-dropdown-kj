@@ -9,30 +9,21 @@ import { styles } from './styles';
 
 const ic_close = require('../../assets/close.png');
 
-const defaultProps = {
-  style: {},
-  value: '',
-  showIcon: true,
-  currency: false,
-  numeric: false,
-};
-
-const TextInputComponent: CTextInput = (props) => {
-  const {
-    fontFamily,
-    style,
-    value,
-    autoSearchFoundOnly,
-    placeholderTextColor = '#000',
-    placeholder = '',
-    showIcon,
-    inputStyle,
-    iconStyle,
-    onChangeText = (_value: string) => { },
-    renderLeftIcon,
-    renderRightIcon,
-  } = props;
-
+const TextInputComponent: CTextInput = ({
+  fontFamily,
+  style = {},
+  value = '',
+  autoSearchFoundOnly,
+  placeholderTextColor = '#000',
+  placeholder = '',
+  showIcon = true,
+  inputStyle,
+  iconStyle,
+  onChangeText = (_value: string) => { },
+  renderLeftIcon,
+  renderRightIcon,
+  ...restProps
+}) => {
   const [text, setText] = useState<string>('');
   const searchInputRef = React.useRef<TextInput>(null);
 
@@ -50,15 +41,14 @@ const TextInputComponent: CTextInput = (props) => {
   const _renderRightIcon = () => {
     if (showIcon) {
       if (renderRightIcon) {
-        return (
-          renderRightIcon()
-        );
+        return renderRightIcon();
       }
       if (text.length > 0) {
         return (
           <TouchableOpacity onPress={() => onChange('')}>
             <Image source={ic_close} style={[styles.icon, iconStyle]} />
-          </TouchableOpacity>)
+          </TouchableOpacity>
+        );
       }
       return null;
     }
@@ -69,19 +59,18 @@ const TextInputComponent: CTextInput = (props) => {
     if (fontFamily) {
       return {
         fontFamily: fontFamily
-      }
+      };
     } else {
-      return {}
+      return {};
     }
-  }
-
+  };
 
   useEffect(() => {
-    if(!autoSearchFoundOnly) return;
-    if(searchInputRef.current){
+    if (!autoSearchFoundOnly) return;
+    if (searchInputRef.current) {
       searchInputRef.current.focus();
     }
-  },[autoSearchFoundOnly])
+  }, [autoSearchFoundOnly]);
 
   return (
     <TouchableWithoutFeedback>
@@ -89,13 +78,13 @@ const TextInputComponent: CTextInput = (props) => {
         <View style={styles.textInput}>
           {renderLeftIcon?.()}
           <TextInput
-            {...props}
             ref={searchInputRef}
             style={[styles.input, inputStyle, font()]}
             value={text}
             placeholder={placeholder}
             placeholderTextColor={placeholderTextColor}
             onChangeText={onChange}
+            {...restProps}
           />
           {_renderRightIcon()}
         </View>
@@ -103,7 +92,5 @@ const TextInputComponent: CTextInput = (props) => {
     </TouchableWithoutFeedback>
   );
 };
-
-TextInputComponent.defaultProps = defaultProps;
 
 export default TextInputComponent;
