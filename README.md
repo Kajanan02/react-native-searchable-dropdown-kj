@@ -32,8 +32,8 @@ or
 [//]: # ([react-native-template-components]&#40;https://github.com/kajanan02/react-native-template-components&#41; A beautiful template for React Native. -->)
 
 [//]: # (#### Demo)
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/demo.gif)
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/demo2.gif)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/demo.gif)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/demo2.gif)
 
 #### Dropdown Props
 | Props              | Params                                          | isRequire | Description                                                                                          |
@@ -128,7 +128,7 @@ or
 
 
 ### Dropdown example
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example.png)
 ```js
   import React, { useState } from 'react';
   import { StyleSheet, Text, View } from 'react-native';
@@ -241,7 +241,7 @@ or
 ```
 
 ### Dropdown example 1
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example1.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example1.png)
 ```javascript
   import React, { useState } from 'react';
   import { StyleSheet } from 'react-native';
@@ -317,7 +317,7 @@ or
 ```
 
 ### Dropdown example 2
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example2.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example2.png)
 ```javascript
   import React, { useState } from 'react';
   import { StyleSheet, View, Text } from 'react-native';
@@ -430,7 +430,7 @@ or
 ```
 
 ### MultiSelect example 1
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example3.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example3.png)
 ```js
   import React, { useState } from 'react';
   import { StyleSheet, View } from 'react-native';
@@ -517,7 +517,7 @@ or
 ```
 
 ### MultiSelect example 2
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example4.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example4.png)
 ```js
   import React, { useState } from 'react';
   import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
@@ -657,7 +657,7 @@ or
 ```
 
 ### SelectCountry example 1
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example5.png)
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example5.png)
 ```js
   import React, { useState } from 'react';
   import { StyleSheet } from 'react-native';
@@ -761,8 +761,8 @@ or
   });
 ```
 
-### SelectCountry example 2
-![](https://github.com/kajanan02/file-upload/blob/master/document/dropdown/example6.png)
+### _SelectCountry example 2_
+![](https://github.com/kajanan02/file-upload/blob/main/document/dropdown/example6.png)
 ```js
   import React, { useState } from 'react';
   import { StyleSheet } from 'react-native';
